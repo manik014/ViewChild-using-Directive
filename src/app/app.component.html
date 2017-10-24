@@ -1,11 +1,36 @@
 <h3>@ViewChild using Directive</h3>
 Color Example:
 <p cpColor>Change my Color </p>
+<p applyColorStyle>Rendere Color</p>
 <div>
   Change Color:
   <input type="radio" name="rad" (click)= "changeColor('green')"> Green
   <input type="radio" name="rad" (click)= "changeColor('cyan')"> Cyan
   <input type="radio" name="rad" (click)= "changeColor('blue')"> Blue
 </div> 
+<p>Creating element,Text and append using ViewChild(TemplateRef) and Rendere</p>
+<ul (click) = "onClick()" #ulist applyColorStyle>
+<li>Click here to add li</li>
+</ul>
 
+<p> Creating element, text and append using Directive,Rendere(appendChild()),HostListener</p>
+<ul ex1 applyColorStyle>
+<li>Click here to add li</li>
+</ul>
+
+<p>Creating element, text using Directive,Rendere(insertBefore()),HostListener</p>
+<div applyColorStyle>
+  <div ex2>click here to add div</div>
+</div>
+
+<p>Removing element, text using Directive,Rendere(removeChild()),HostListener</p>
+<div cpColor>
+  <div ex3>mouse over</div>
+</div>
+<p>set Attribute</p>
+<input type="text" ex4/>
+<!-- On mouse over the CSS class will be added and on mouse leave CSS class will be removed. . -->
+<div ex5>Add and Remove Class!Find the source code of DOM on mouse over </div>
+<p>Add & remove style</p>
+<button ex6>Click Attribute</button>
 
